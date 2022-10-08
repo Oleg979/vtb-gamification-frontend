@@ -657,7 +657,10 @@ p {
     width: 230px;
     height: 65px;
     cursor: pointer;
+}
 
+.change:active {
+    transform: scale(0.98);
 }
 
 
