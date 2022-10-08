@@ -7,6 +7,9 @@
     font-size: 100%;
 }
 
+html {
+    height: 100%;
+}
 
 body {
     height: 100%;
@@ -106,7 +109,7 @@ main {
     color: #062776;
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
 }
 
 .DR-sum div {
@@ -202,7 +205,6 @@ main {
     padding: 50px;
     width: 70%;
     min-height: 250px;
-    border-radius: 8px;
     min-width: 240px;
 }
 .tabs input[name=tab-control] {

@@ -39,7 +39,7 @@
       <h1>Маркетплейс</h1>
       <div class="wallet">
         <span>Мои средства: </span>
-        <span>15455</span>
+        <span id="balance">10900</span>
         <span>DR</span>
       </div>
     </div>
@@ -48,7 +48,7 @@
       <div class="item">
           <img src="assets/img/nok600.jpg">
           <span><pre>9000 DR</pre></span>
-          <button class="change">Обменять</button>
+          <button id="del" class="change">Обменять</button>
       </div>
       <div class="item">
         <img src="assets/img/VTB-9.jfif">
@@ -74,8 +74,15 @@
       <div class="item"></div>
     </div>
   </main>
-
-
-
+  <script>
+    document.getElementById("del").addEventListener("click", () => {
+      document.getElementById("del").style.background = "grey";
+    })
+    const urlParams = new URLSearchParams(window.location.search);
+    const mode = urlParams.get('mode');
+    if(mode) {
+      document.getElementById('balance').innerHTML = '1000';
+    }
+  </script>
 </body>
 </html>

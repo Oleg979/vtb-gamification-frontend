@@ -3,3 +3,4 @@ if (progress) {
     progress.style.width = progress.getAttribute("data-complete") + "%";
     progress.style.opacity = 1;
 }
+

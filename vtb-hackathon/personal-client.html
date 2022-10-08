@@ -76,29 +76,38 @@
                         </div>
                     </div>
 
-                    <p class="lvl-header">Кошелек</p>
+                    <div style="display: flex;gap: 71px;">
+                        <div style="min-width: 300px;">
+                            <p class="lvl-header">Кошелек</p>
 
-                    <div class="DR-sum">
-                        <span><pre>Баланс :   </pre></span>
+                            <div class="DR-sum">
+                                <span><pre>Баланс :   </pre></span>
 
-                        <span><pre id="balanceCoins">45854  </pre></span>
-                        <span>DR</span>
-                        <div>?</div>
-                    </div>
-                    <div class="main-btns">
-                        <button class="thanks-btn">Поблагодарить</button>
-                        <a href="marketplace.html"><button class="thanks-btn">Потратить</button></a>
-                    </div>
-
-                    <p class="goals-header">Мои цели</p>
-                    <div id="goal" class="next-goal">
-                        <img src="assets/img/goal.png" alt="goal">
+                                <span><pre id="balanceCoins">45854  </pre></span>
+                                <span>DR</span>
+                                <div>?</div>
+                            </div>
+                            <div class="main-btns">
+                                <button class="thanks-btn">Поблагодарить</button>
+                                <a id="link" href="marketplace.html?mode=1">
+                                    <button class="thanks-btn">Потратить</button>
+                                </a>
+                            </div>
+                        </div>
                         <div>
-                            <p class="p-goal1">Твоя следующая цель: Выпустить проект в прод</p>
-                            <p class="p-goal2">Награда: NFT "Chilling Capybara"</p>
+                            <div>
+                                <p class="goals-header">Мои цели</p>
+                                <div id="goal" class="next-goal">
+                                    <img src="assets/img/goal.png" alt="goal">
+                                    <div>
+                                        <p class="p-goal1">Твоя следующая цель: Выпустить проект в прод</p>
+                                        <p class="p-goal2">Награда: NFT "Chilling Capybara"</p>
+                                    </div>
+                                </div>
+                                <div id="no-goal">Вы выполнили все цели. Хорошая работа!</div>
+                            </div>
                         </div>
                     </div>
-                    <div id="no-goal">Вы выполнили все цели. Хорошая работа!</div>
                 </section>
 
                 <section>
@@ -266,7 +275,6 @@
             document.getElementById("no-goal").style.display = "initial";
         }
         fetch(`http://localhost:3000/user/${userId}`).then(res => res.json()).then(res => {
-            console.log(res)
             document.getElementById("lvl").innerText = `Уровень ${res.lvl}`;
             document.getElementById("pointsToNext").innerText = `${50 * (res.lvl + 1) - res.pointsOnCurrentLevel} до уровня ${res.lvl + 1}`;
             document.getElementById("bar").style.width = res.pointsOnCurrentLevel / (50 * (res.lvl + 1)) * 100 + "%";
@@ -311,13 +319,14 @@
         fetch(`http://localhost:3000/nft/sell/capybara.png/from/3`).then(res => res.json()).then(res => {
             console.log('done');
             localStorage.setItem("capybaraSelled", 1);
+            document.getElementById("link").setAttribute("href", "marketplace.html");
             document.getElementById("balanceCoins").innerHTML = +document.getElementById("balanceCoins").innerHTML;
             loadUserData(userId);
         })
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    const userId = urlParams.get('userId');
+    const userId = urlParams.get('userId') || '3';
     loadUserData(userId);
     loadUserWallet(userId);
 </script>
