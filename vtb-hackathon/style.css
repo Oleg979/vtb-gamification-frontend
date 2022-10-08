@@ -407,15 +407,17 @@ main {
 
 .notification {
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 16px;
     background: white;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
 }
 
 .notification_data {
@@ -424,4 +426,54 @@ main {
     gap: 5px;
     justify-content: center;
     align-items: center;
+}
+
+
+.nfts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.nft {
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+    box-shadow: rgb(138 150 168 / 40%) 0px 4px 8px, rgb(138 150 168 / 8%) 0px -2px 4px;
+    display: block;
+    text-decoration: none;
+    color: rgb(43, 49, 59);
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border-radius: 8px;
+    min-width: 160px;
+    margin-right: 16px;
+    cursor: pointer;
+    padding: 16px;
+}
+
+.nft:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(138 150 168 / 40%) 0px 8px 16px, rgb(138 150 168 / 8%) 0px -2px 8px;
+}
+
+.nft-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nft-name {
+    font-size: 20px;
+    line-height: 24px;
+    color: rgb(43, 49, 59);
+    font-weight: 550;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-width: 160px;
 }
