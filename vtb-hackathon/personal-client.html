@@ -13,11 +13,11 @@
             <path fill="#0a2896" d="M49.16 20.055v0.097c1.057 0.388 2.067 1.068 2.596 1.504 1.634 1.359 2.356 3.154 2.356 5.483 0 3.835-2.019 6.6-5.336 7.474-1.010 0.291-2.067 0.388-4.038 0.388h-10.045v-28.048h8.893c1.827 0 3.076 0.097 4.181 0.387 3.221 0.874 5.336 3.106 5.336 6.648 0 1.893-0.673 3.495-1.778 4.562-0.481 0.485-1.154 1.068-2.163 1.504zM40.268 23.015v7.376h3.846c1.153 0 2.211-0.097 2.98-0.825s1.105-1.65 1.105-2.863c0-0.921-0.241-1.795-0.721-2.426-0.817-1.019-1.827-1.262-3.557-1.262h-3.654zM40.219 18.162h3.125c0.961 0 1.442 0 1.922-0.145 1.299-0.389 2.116-1.552 2.116-3.154 0-1.892-0.865-2.718-2.116-3.105-0.529-0.146-1.057-0.194-2.115-0.194h-2.932v6.599zM62.475 35.002v-23.342h-8.027v-4.706h22.305l-1.586 4.706h-7.115v23.342h-5.576zM78.483 35.002v-28.048h18.075l-1.586 4.706h-10.96v6.212h4.471c3.605 0 5.48 0.874 6.778 1.989 1.010 0.874 2.74 2.814 2.74 6.649 0 3.785-1.778 5.871-3.269 6.939-1.73 1.212-3.557 1.553-7.259 1.553h-8.989zM84.011 30.294h4.182c1.586 0 2.547-0.388 3.22-1.262 0.336-0.436 0.817-1.214 0.817-2.669s-0.481-2.475-1.442-3.203c-0.576-0.436-1.346-0.678-2.644-0.678h-4.134v7.812z"></path>
         </svg>-->
         <img src="assets/img/2560px-VTB_Logo_2018.svg.png" alt="vtb-logo" height="55px">
-        <span> - exchange</span>
+        <span> - gamification</span>
     </div>
     <div class="header-right">
-        <p>Иванов Иван Иванович</p>
-        <img src="assets/img/avatar.png" alt="avatar" class="header-avatar" height="55px">
+        <p id="name">Иванов Иван Иванович</p>
+        <img id="avatar" src="assets/img/avatar.png" alt="avatar" class="header-avatar" height="55px">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24" class="iconSvg" height="24" width="24"
              focusable="false" style="
     width: 48px;
@@ -35,9 +35,9 @@
 </header>
 <main>
     <div class="person-info">
-        <img src="assets/img/avatar.png" alt="avatar" height="200px">
+        <img id="avatar2" src="assets/img/avatar.png" alt="avatar" height="200px">
         <div class="person-data">
-            <p class="name">Иванов Иван Иванович</p>
+            <p class="name" id="name2">Иванов Иван Иванович</p>
             <p class="position">Разработчик интерфейсов</p>
             <p class="position">Команда ВТБ Ипотека</p>
 
@@ -67,12 +67,12 @@
                     <p class="lvl-header">Мой прогресс</p>
                     <div class="progress-container">
                         <div class="progress-bar">
-                            <div class="js-completed-bar completed-bar" data-complete="60">
+                            <div id="bar" class="js-completed-bar completed-bar" data-complete="60">
                             </div>
                         </div>
                         <div class="progress-information">
-                            <p class="text-colour--faded-60">Уровень 10</p>
-                            <p class="text-colour--primary-red--80">60%</p>
+                            <p id="lvl" class="text-colour--faded-60">Уровень 10</p>
+                            <p id="pointsToNext" class="text-colour--primary-red--80">60%</p>
                         </div>
                     </div>
 
@@ -81,7 +81,7 @@
                     <div class="DR-sum">
                         <span><pre>Баланс :   </pre></span>
 
-                        <span><pre>45854  </pre></span>
+                        <span><pre id="balanceCoins">45854  </pre></span>
                         <span>DR</span>
                         <div>?</div>
                     </div>
@@ -91,76 +91,33 @@
                     </div>
 
                     <p class="goals-header">Мои цели</p>
-                    <div class="next-goal">
+                    <div id="goal" class="next-goal">
                         <img src="assets/img/goal.png" alt="goal">
                         <div>
-                            <p class="p-goal1">Твоя следующая цель: Посетить митап</p>
-                            <p class="p-goal2">Награда: +25 DR, +15xp</p>
+                            <p class="p-goal1">Твоя следующая цель: Выпустить проект в прод</p>
+                            <p class="p-goal2">Награда: NFT "Chilling Capybara"</p>
                         </div>
                     </div>
+                    <div id="no-goal">Вы выполнили все цели. Хорошая работа!</div>
                 </section>
 
                 <section>
                     <p class="achievement-header">Мои достижения</p>
-                    <div class="achievement-container">
+                    <div id="achievements" class="achievement-container">
                         <div class="achievement">
                             <img src="assets/img/medal.png">
-                            <p>Подпись</p>
+                            <p>Провёл 1 митап</p>
                         </div>
                         <div class="achievement">
                             <img src="assets/img/trophy.png">
-                            <p>Подпись</p>
-                        </div>
-                        <div class="achievement">
-                            <img src="assets/img/medal%20(2).png">
-                            <p>Подпись</p>
-                        </div>
-                    </div>
-                    <p class="achievement-header">Все достижения</p>
-                    <div class="achievement-container">
-                        <div class="achievement">
-                            <img src="assets/img/medal.png">
-                            <p>Подпись</p>
-                        </div>
-                        <div class="achievement">
-                            <img src="assets/img/trophy.png">
-                            <p>Подпись</p>
-                        </div>
-                        <div class="achievement">
-                            <img src="assets/img/medal%20(2).png">
-                            <p>Подпись</p>
+                            <p>Закрыл спринт</p>
                         </div>
                     </div>
                 </section>
 
 
-
                 <section>
-                    <div class="nfts">
-                        <div class="nft">
-                            <div style="width: 240px; height: 190px;">
-                                <img src="assets/img/capybara.png" style="width: 100%; border-radius: 50%">
-                            </div>
-                            <div class="nft_data">
-                                <div style="display: flex; justify-content: space-between">
-                                    <div class="nft-name">Chilling Capybara</div>
-                                    <div class="nft-name" style="min-width: auto; color: green; font-weight: bolder">5000 DR</div>
-                                </div>
-                                <div>Такой NFT есть у <b style="color: #0b56dc">5% сотрудников</b></div>
-                            </div>
-                        </div>
-                        <div class="nft">
-                            <div style="width: 178px; height: 190px;">
-                                <img src="assets/img/cat.png" style="width: 100%; border-radius: 50%;">
-                            </div>
-                            <div class="nft_data">
-                                <div style="display: flex; justify-content: space-between">
-                                    <div class="nft-name">Crypto Kitty</div>
-                                    <div class="nft-name" style="min-width: auto; color: green; font-weight: bolder">1000 DR</div>
-                                </div>
-                                <div>Такой NFT есть у <b style="color: #0b56dc">55% сотрудников</b></div>
-                            </div>
-                        </div>
+                    <div id="nfts" class="nfts">
                     </div>
                 </section>
 
@@ -225,28 +182,144 @@
         </div>
     </div>
     <div id="notification" class="notification">
-        <div><img src="assets/img/avatar.png" style="border-radius: 50%" alt="avatar" height="50px"></div>
+        <div><img src="assets/img/female.png" style="border-radius: 50%" alt="avatar" height="50px"></div>
         <div class="notification_data">
-            <div style="font-size: 17px;"><b>Иван Иванов</b> отправил Вам <span
+            <div style="font-size: 17px;"><b>Мария Иванова</b> отправила Вам <span
                     style="color: green; font-weight: bolder; font-size: 20px;">1000 DR</span></div>
             <div class="transaction_msg">
-                За крутую лекцию. Узнал много нового!
+                За крутую лекцию. Узнала много нового!
             </div>
+        </div>
+    </div>
+    <div id="notification2" class="notification">
+        <div><img src="assets/img/avatar.png" style="border-radius: 50%" alt="avatar" height="50px"></div>
+        <div class="notification_data">
+            <div style="font-size: 17px;"><b>Достигнуто: </b><span
+                    style="color: green; font-weight: bolder; font-size: 20px;">Выпустить проект в прод</span></div>
+            <div class="transaction_msg">
+                Награда: NFT "Chilling Capybara"
+            </div>
+        </div>
+    </div>
+    <div id="notification3" class="notification">
+        <div class="notification_data">
+            <div style="font-size: 17px;"><b>Получено достижение: </b><span
+                    style="color: green; font-weight: bolder; font-size: 20px;">Купил на 10к DR</span></div>
         </div>
     </div>
 </main>
 <footer></footer>
-<script  type ="text/javascript" src="../script.js"></script>
+<script type="text/javascript" src="../script.js"></script>
 <script>
+
     document.addEventListener('keypress', e => {
         console.log(e.keyCode)
-        if (e.keyCode === 122){
+        if (e.keyCode === 122) {
             document.getElementById("notification").style.opacity = 1;
+
             setTimeout(() => {
                 document.getElementById("notification").style.opacity = 0;
             }, 3000)
         }
     })
+
+
+    document.addEventListener('keypress', e => {
+        if (e.keyCode === 99) {
+            document.getElementById("notification3").style.opacity = 1;
+            document.getElementById("achievements").innerHTML += `
+            <div class="achievement">
+                            <img src="assets/img/medal%20(2).png">
+                            <p>Купил на 10к DR</p>
+                        </div>
+            `
+            setTimeout(() => {
+                document.getElementById("notification3").style.opacity = 0;
+            }, 3000)
+        }
+    })
+
+
+    document.addEventListener('keypress', e => {
+        if (e.keyCode === 120) {
+            document.getElementById("notification2").style.opacity = 1;
+            document.getElementById("goal").style.display = 'none';
+            document.getElementById("no-goal").style.display = "initial";
+            fetch(`http://localhost:3000/nft/assign/capybara.png/to/4`).then(res => res.json()).then(res => {
+                console.log('done');
+                loadUserData(userId);
+            })
+            setTimeout(() => {
+                document.getElementById("notification2").style.opacity = 0;
+            }, 3000)
+        }
+    })
+
+    const loadUserData = (userId) => {
+        if (userId == 4) {
+            document.getElementById("name").innerText = "Иванова Мария Ивановна";
+            document.getElementById("avatar").src = "assets/img/female.png";
+            document.getElementById("name2").innerText = "Иванова Мария Ивановна";
+            document.getElementById("avatar2").src = "assets/img/female.png"
+        } else {
+            document.getElementById("goal").style.display = 'none';
+            document.getElementById("no-goal").style.display = "initial";
+        }
+        fetch(`http://localhost:3000/user/${userId}`).then(res => res.json()).then(res => {
+            console.log(res)
+            document.getElementById("lvl").innerText = `Уровень ${res.lvl}`;
+            document.getElementById("pointsToNext").innerText = `${50 * (res.lvl + 1) - res.pointsOnCurrentLevel} до уровня ${res.lvl + 1}`;
+            document.getElementById("bar").style.width = res.pointsOnCurrentLevel / (50 * (res.lvl + 1)) * 100 + "%";
+            const nfts = res.nfts;
+            document.getElementById("nfts").innerHTML = "";
+            nfts.forEach(nft => {
+                fetch(`http://localhost:3000/nft/${nft}`).then(res => res.json()).then(res => {
+                    document.getElementById("nfts").innerHTML += `
+                  <div class="nft">
+                            <div style="width: 240px; height: 190px;">
+                                <img src="assets/img/${res.uri}" style="width: 100%; border-radius: 50%">
+                            </div>
+                            <div class="nft_data">
+                                <div style="display: flex; justify-content: space-between">
+                                    <div class="nft-name">${res.name}</div>
+                                    <div class="nft-name" style="min-width: auto; color: green; font-weight: bolder">
+                                        ${res.cost} DR
+                                    </div>
+                                </div>
+                                <div>Такой NFT есть у <b style="color: #0b56dc">${res.rarity}% сотрудников</b></div>
+                                <button class="thanks-btn" onclick="sellNft()">Продать</button>
+                            </div>
+                        </div>`
+                })
+            })
+        })
+    }
+
+    const loadUserWallet = (userId) => {
+        fetch(`http://localhost:3000/user/${userId}/wallet`).then(res => res.json()).then(res => {
+            console.log(res);
+            const selled = localStorage.getItem("capybaraSelled");
+            let minus = 0;
+            if (userId == 3) {
+                minus = (!selled ? 1099000 : 1089100)
+            }
+            document.getElementById("balanceCoins").innerText = res.coinsAmount - minus;
+        })
+    }
+
+    const sellNft = () => {
+        fetch(`http://localhost:3000/nft/sell/capybara.png/from/3`).then(res => res.json()).then(res => {
+            console.log('done');
+            localStorage.setItem("capybaraSelled", 1);
+            document.getElementById("balanceCoins").innerHTML = +document.getElementById("balanceCoins").innerHTML;
+            loadUserData(userId);
+        })
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const userId = urlParams.get('userId');
+    loadUserData(userId);
+    loadUserWallet(userId);
 </script>
 </body>
 </html>

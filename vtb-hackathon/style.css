@@ -538,6 +538,7 @@ p {
     background: white;
     opacity: 0;
     transition: opacity .3s ease-in-out;
+    border: 2px solid black;
 }
 
 .notification_data {
@@ -596,4 +597,8 @@ p {
     white-space: nowrap;
     text-overflow: ellipsis;
     min-width: 160px;
+}
+
+#no-goal {
+    display: none;
 }
