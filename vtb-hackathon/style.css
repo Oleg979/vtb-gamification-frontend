@@ -36,19 +36,24 @@ header {
 .header-right p {
     font-size: 1.3rem;
     color: #062776;
+    margin-right: 5%;
 }
 
 .header-right img {
     display: inline-block;
     border-radius: 50%;
-    margin-left: 5%;
+
 }
 
 main {
-    display: flex;
+
     height: 100%;
     background-color: rgb(241, 242, 244);
 
+}
+
+.user-main {
+    display: flex;
 }
 
 .person-info {
@@ -538,7 +543,6 @@ p {
     background: white;
     opacity: 0;
     transition: opacity .3s ease-in-out;
-    border: 2px solid black;
 }
 
 .notification_data {
@@ -598,6 +602,64 @@ p {
     text-overflow: ellipsis;
     min-width: 160px;
 }
+
+.store-header {
+    padding-top: 2%;
+    margin-left: 5%;
+}
+
+.store-main h1 {
+    color: #0d69f2;
+    font-size: 6rem;
+}
+
+.store-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    margin-top: 7%;
+}
+
+.store-container .item {
+    width: 33%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.store-container .item img {
+    height: 45%;
+}
+
+.store-container .item span {
+    color: #062776;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+.wallet {
+    color: #062776;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+.change {
+    color: white;
+    background: linear-gradient(90deg, rgb(17, 52, 181) 0%, rgb(35, 83, 224) 75%);
+    border-radius: 8px;
+    border: none;
+    letter-spacing: -0.4px;
+    font-size: 1.5rem;
+    margin-top: 4%;
+    width: 230px;
+    height: 65px;
+    cursor: pointer;
+
+}
+
 
 #no-goal {
     display: none;
