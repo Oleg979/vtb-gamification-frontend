@@ -38,7 +38,9 @@
         <img src="assets/img/avatar.png" alt="avatar" height="200px">
         <div class="person-data">
             <p class="name">Иванов Иван Иванович</p>
-            <p class="position">Middle Frontend-developer </p>
+            <p class="position">Разработчик интерфейсов</p>
+            <p class="position">Команда ВТБ Ипотека</p>
+
         </div>
     </div>
     <div class="person-main-info">
@@ -79,10 +81,32 @@
                     similique nulla.
                 </section>
                 <section>
-                    <h2>Shipping</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nemo ducimus eius, magnam error
-                    quisquam sunt voluptate labore, excepturi numquam! Alias libero optio sed harum debitis! Veniam,
-                    quia in eum.
+                    <div class="nfts">
+                        <div class="nft">
+                            <div style="width: 240px; height: 190px;">
+                                <img src="assets/img/capybara.png" style="width: 100%; border-radius: 50%">
+                            </div>
+                            <div class="nft_data">
+                                <div style="display: flex; justify-content: space-between">
+                                    <div class="nft-name">Chilling Capybara</div>
+                                    <div class="nft-name" style="min-width: auto; color: green; font-weight: bolder">5000 DR</div>
+                                </div>
+                                <div>Такой NFT есть у <b style="color: #0b56dc">5% сотрудников</b></div>
+                            </div>
+                        </div>
+                        <div class="nft">
+                            <div style="width: 178px; height: 190px;">
+                                <img src="assets/img/cat.png" style="width: 100%; border-radius: 50%;">
+                            </div>
+                            <div class="nft_data">
+                                <div style="display: flex; justify-content: space-between">
+                                    <div class="nft-name">Crypto Kitty</div>
+                                    <div class="nft-name" style="min-width: auto; color: green; font-weight: bolder">1000 DR</div>
+                                </div>
+                                <div>Такой NFT есть у <b style="color: #0b56dc">55% сотрудников</b></div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section>
                     <div class="transactions">
@@ -144,10 +168,11 @@
         <div>
         </div>
     </div>
-    <div class="notification">
+    <div id="notification" class="notification">
         <div><img src="assets/img/avatar.png" style="border-radius: 50%" alt="avatar" height="50px"></div>
         <div class="notification_data">
-            <div style="font-size: 17px;"><b>Иван Иванов</b> отправил Вам <span style="color: green; font-weight: bolder; font-size: 20px;">1000 DR</span></div>
+            <div style="font-size: 17px;"><b>Иван Иванов</b> отправил Вам <span
+                    style="color: green; font-weight: bolder; font-size: 20px;">1000 DR</span></div>
             <div class="transaction_msg">
                 За крутую лекцию. Узнал много нового!
             </div>
@@ -155,5 +180,16 @@
     </div>
 </main>
 <footer></footer>
+<script>
+    document.addEventListener('keypress', e => {
+        console.log(e.keyCode)
+        if (e.keyCode === 122){
+            document.getElementById("notification").style.opacity = 1;
+            setTimeout(() => {
+                document.getElementById("notification").style.opacity = 0;
+            }, 3000)
+        }
+    })
+</script>
 </body>
 </html>
