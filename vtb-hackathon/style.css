@@ -1,0 +1,427 @@
+@import url('//db.onlinewebfonts.com/c/535f840c3f8648137acc62e170b62847?family=VTB+Group+Cond+Book');
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "VTB Group Cond Book", sans-serif;
+    font-size: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /*padding-top: 0.8%;
+    padding-left: 2%;*/
+    padding: 0.8% 2.5%;
+    border-bottom: 1px solid rgb(212, 215, 223);
+}
+
+.header-left {
+    width: 49%;
+    color: #062776;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 49%;
+    font-size: 1.3rem;
+    color: #062776;
+}
+
+.header-right img {
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 5%;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    background-color: rgb(241, 242, 244);
+
+}
+
+.person-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 16px;
+    height: 30%;
+    padding: 4%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3%;
+}
+
+.person-info img {
+    display: inline-block;
+    border-radius: 50%;
+    margin-bottom: 7%;
+}
+
+.person-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.person-data .name {
+    font-size: 1.5rem;
+    color: #062776;
+    font-weight: 500;
+    margin-bottom: 5%;
+}
+
+.person-data .position {
+    color: rgb(96, 105, 129);
+}
+
+.DR-sum {
+    display: flex;
+    color: #062776;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.DR-sum div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6%;
+    border-radius: 50%;
+    border: 4px solid #062776;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.thanks-btn {
+    color: white;
+    background: linear-gradient(90deg, rgb(17, 52, 181) 0%, rgb(35, 83, 224) 75%);
+    border-radius: 16px;
+    border: none;
+    letter-spacing: -0.4px;
+    font-size: 1.5rem;
+    margin-top: 12%;
+    width: 230px;
+    height: 65px;
+    cursor: pointer;
+}
+.thanks-btn:active {
+    transform: scale(0.98);
+}
+
+/*tabs*/
+
+.tabs {
+    margin-top:3.7%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    background: white;
+    padding: 50px;
+    padding-bottom: 135px;
+    width: 70%;
+    height: 250px;
+    border-radius: 16px;
+    min-width: 240px;
+}
+.tabs input[name=tab-control] {
+    display: none;
+}
+.tabs .content section h2,
+.tabs ul li label {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 18px;
+    color: #428bff;
+}
+.tabs ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.tabs ul li {
+    box-sizing: border-box;
+    flex: 1;
+    width: 25%;
+    padding: 0 10px;
+    text-align: center;
+}
+.tabs ul li label {
+    transition: all 0.3s ease-in-out;
+    color: #929daf;
+    padding: 5px auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.tabs ul li label br {
+    display: none;
+}
+.tabs ul li label svg {
+    fill: #929daf;
+    height: 1.2em;
+    vertical-align: bottom;
+    margin-right: 0.2em;
+    transition: all 0.2s ease-in-out;
+}
+.tabs ul li label:hover, .tabs ul li label:focus, .tabs ul li label:active {
+    outline: 0;
+    color: #bec5cf;
+}
+.tabs ul li label:hover svg, .tabs ul li label:focus svg, .tabs ul li label:active svg {
+    fill: #bec5cf;
+}
+.tabs .slider {
+    position: relative;
+    width: 25%;
+    transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+}
+.tabs .slider .indicator {
+    position: relative;
+    width: 50px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 4px;
+    background: #428bff;
+    border-radius: 1px;
+}
+.tabs .content {
+    margin-top: 30px;
+    width: 1200px;
+}
+.tabs .content section {
+    display: none;
+    -webkit-animation-name: content;
+    animation-name: content;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    line-height: 1.4;
+    width: 800px;
+}
+.tabs .content section h2 {
+    color: #428bff;
+    display: none;
+}
+.tabs .content section h2::after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #428bff;
+    margin-top: 5px;
+    left: 1px;
+}
+.tabs input[name=tab-control]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
+    cursor: default;
+    color: #428bff;
+}
+.tabs input[name=tab-control]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label svg {
+    fill: #428bff;
+}
+.tabs input[name=tab-control]:nth-of-type(1):checked ~ .slider {
+    transform: translateX(0%);
+}
+.tabs input[name=tab-control]:nth-of-type(1):checked ~ .content > section:nth-child(1) {
+    display: block;
+}
+.tabs input[name=tab-control]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
+    cursor: default;
+    color: #428bff;
+}
+.tabs input[name=tab-control]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label svg {
+    fill: #428bff;
+}
+.tabs input[name=tab-control]:nth-of-type(2):checked ~ .slider {
+    transform: translateX(100%);
+}
+.tabs input[name=tab-control]:nth-of-type(2):checked ~ .content > section:nth-child(2) {
+    display: block;
+}
+.tabs input[name=tab-control]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
+    cursor: default;
+    color: #428bff;
+}
+.tabs input[name=tab-control]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label svg {
+    fill: #428bff;
+}
+.tabs input[name=tab-control]:nth-of-type(3):checked ~ .slider {
+    transform: translateX(200%);
+}
+.tabs input[name=tab-control]:nth-of-type(3):checked ~ .content > section:nth-child(3) {
+    display: block;
+}
+.tabs input[name=tab-control]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
+    cursor: default;
+    color: #428bff;
+}
+.tabs input[name=tab-control]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label svg {
+    fill: #428bff;
+}
+.tabs input[name=tab-control]:nth-of-type(4):checked ~ .slider {
+    transform: translateX(300%);
+}
+.tabs input[name=tab-control]:nth-of-type(4):checked ~ .content > section:nth-child(4) {
+    display: block;
+}
+@-webkit-keyframes content {
+    from {
+        opacity: 0;
+        transform: translateY(5%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes content {
+    from {
+        opacity: 0;
+        transform: translateY(5%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+/*tabs*/
+
+.transaction_amount {
+    color: green;
+    font-size: 26px;
+    line-height: 24px;
+    font-weight: 550;
+}
+
+.minus {
+    color: red;
+}
+
+.transaction_msg {
+    max-height: 36px;
+    color: rgb(43, 49, 59);
+    background-color: rgb(226, 229, 233);
+    padding: 8px 20px;
+    border-radius: 4px 16px 16px;
+    display: inline-block;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.transaction_from {
+    font-size: 20px;
+    line-height: 24px;
+    color: rgb(43, 49, 59);
+    font-weight: 550;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-width: 160px;
+}
+
+.transaction_icon {
+    width: 40px;
+    height: 40px;
+}
+
+.transaction_icon img {
+    width: 100%;
+}
+
+.transaction_time {
+    color: rgb(98, 111, 132);
+    margin-right: 10px;
+    min-width: 35px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.transaction_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.transaction_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.transactions {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 16px;
+    background: white;
+}
+
+.notification_data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
