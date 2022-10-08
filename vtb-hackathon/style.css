@@ -7,9 +7,6 @@
     font-size: 100%;
 }
 
-html {
-    height: 100%;
-}
 
 body {
     height: 100%;
@@ -18,8 +15,6 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    /*padding-top: 0.8%;
-    padding-left: 2%;*/
     padding: 0.8% 2.5%;
     border-bottom: 1px solid rgb(212, 215, 223);
 }
@@ -36,6 +31,9 @@ header {
     justify-content: flex-end;
     align-items: center;
     width: 49%;
+}
+
+.header-right p {
     font-size: 1.3rem;
     color: #062776;
 }
@@ -92,11 +90,18 @@ main {
     color: rgb(96, 105, 129);
 }
 
+.lvl-header {
+    color: rgb(182, 193, 221);
+    font-size: 40px;
+    margin-top: 3%;
+}
+
 .DR-sum {
     display: flex;
     color: #062776;
     font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 10%;
 }
 
 .DR-sum div {
@@ -111,14 +116,19 @@ main {
     cursor: pointer;
 }
 
+.main-btns {
+    display: flex;
+    flex-direction: column;
+}
+
 .thanks-btn {
     color: white;
     background: linear-gradient(90deg, rgb(17, 52, 181) 0%, rgb(35, 83, 224) 75%);
-    border-radius: 16px;
+    border-radius: 8px;
     border: none;
     letter-spacing: -0.4px;
     font-size: 1.5rem;
-    margin-top: 12%;
+    margin-bottom: 3%;
     width: 230px;
     height: 65px;
     cursor: pointer;
@@ -127,19 +137,67 @@ main {
     transform: scale(0.98);
 }
 
+.goals-header {
+    color: rgb(182, 193, 221);
+    font-size: 40px;
+    margin-bottom: 3%;
+}
+
+
+.next-goal {
+    display: flex;
+}
+
+.next-goal img {
+    height: 80px;
+    margin-right: 3%;
+}
+
+.next-goal div .p-goal1 {
+    color: #062776;
+    font-size: 1.5rem;
+}
+
+
+.achievement-container {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+    margin-bottom: 3%;
+}
+
+.achievement {
+    margin-right: 10%;
+}
+
+.achievement img {
+    height: 100px;
+}
+
+.achievement p {
+    margin-top: 17%;
+    text-align: center;
+
+}
+
+.achievement-header {
+    color: rgb(182, 193, 221);
+    font-size: 40px;
+    margin-bottom: 3%;
+}
+
 /*tabs*/
 
 .tabs {
-    margin-top:3.7%;
+    margin-top:4.3%;
     left: 50%;
     transform: translateX(-50%);
     position: relative;
     background: white;
     padding: 50px;
-    padding-bottom: 135px;
     width: 70%;
-    height: 250px;
-    border-radius: 16px;
+    min-height: 250px;
+    border-radius: 8px;
     min-width: 240px;
 }
 .tabs input[name=tab-control] {
@@ -322,6 +380,68 @@ main {
     }
 }
 /*tabs*/
+
+/* progress bar */
+
+.progress-container {
+    margin-top: 3.5rem;
+    padding-right: 70px;
+}
+
+.progress-bar {
+    background-color: transparent;
+    border: 3px #f4f4f4 solid;
+    border-radius: 20px;
+    position: relative;
+    margin: 4px 0 16px 0;
+    height: 30px;
+    width: 100%;
+}
+.progress-bar .completed-bar {
+    background: linear-gradient(90deg, rgb(17, 52, 181) 0%, rgb(35, 83, 224) 75%);
+    border-radius: 20px;
+    color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    transition: width 2s ease 0.4s;
+    padding: 0 8px;
+}
+.progress-bar .completed-bar__dashed {
+    width: 96%;
+    border: 2px dashed #ffffff;
+}
+.progress-bar .completed-bar__truck {
+    font-size: 1.5rem;
+    margin-left: 4px;
+}
+
+.progress-information {
+    justify-content: space-between;
+    padding: 0 4px;
+    display: flex;
+}
+
+p {
+    letter-spacing: 1px;
+    line-height: 1.5;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgba(48, 48, 48, 0.6);
+}
+
+
+/* progress bar */
 
 .transaction_amount {
     color: green;
